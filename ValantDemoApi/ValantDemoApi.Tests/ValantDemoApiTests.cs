@@ -1,11 +1,7 @@
 using System;
 using System.IO;
 using System.Net.Http;
-using System.Security.Policy;
 using System.Threading.Tasks;
-using FluentAssertions;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace ValantDemoApi.Tests
@@ -19,7 +15,6 @@ namespace ValantDemoApi.Tests
         public void Setup()
         {
           var factory = new APIWebApplicationFactory();
-          //var options = new WebApplicationFactoryClientOptions { AllowAutoRedirect = false };
           this.client = factory.CreateClient();
         }
 
