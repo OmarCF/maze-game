@@ -1,0 +1,18 @@
+<div>
+    <label for="file">Select maze file:</label>
+    <input type="file" (change)="fileChange($event)" />
+  </div>
+  <div>
+    <p>
+      <button (click)="uploadFile()">Upload file</button>
+    </p>
+  </div>
+  
+  <div>
+    <label>Mazes:</label>
+    <select #teams (change)="onMazeSelected(teams.value)">
+        <option class="dropdown-item" disabled selected value="undefined">Select an Option</option>
+        <option *ngFor="let fileName of mazes">{{ fileName }}</option>
+    </select>
+  </div>
+  <hr />

@@ -14,18 +14,8 @@ export class AppComponent implements OnInit {
   constructor(private logger: LoggingService, private stuffService: StuffService) {}
 
   ngOnInit() {
-    this.logger.log('Welcome to the AppComponent');
-    this.getStuff();
+    
   }
 
-  private getStuff(): void {
-    this.stuffService.getStuff().subscribe({
-      next: (response: string[]) => {
-        this.data = response;
-      },
-      error: (error) => {
-        this.logger.error('Error getting stuff: ', error);
-      },
-    });
-  }
+  
 }
